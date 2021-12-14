@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vikram Kachale</title>
+<link rel="stylesheet" type = "text/css" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+
+  <ul class="myclass">
+    <li class="myclass"><a href="Contact.html">Contact Me</a></li>
+    <li class="myclass"><a href="MyToys.html">My Toys</a></li>
+    <li class="myclass"><a href="hobby.html">Hobby</a></li>
+    <li class="myclass"><a href="academics.html">Academics</a></li>
+    <li class="myclass"><a href="prof.html">Professional</a></li>
+    <li class="myclass"><a href="hometown.html">HomeTown</a></li>
+    <li class="myclass"><a href="Intro.html">About</a></li>
+  </ul>
+  
+  <div class = "hello"><div class ="blinking" >
+    <div id="mouse">
+        <a
+          v-on:mouseover="mouseover"
+          v-on:mouseleave="mouseleave">
+          {{message}}
+        </a>
+      </div>
+</div></div><br>
+
+This is Vikram Kachale from windy city "Chicago".I have recently joined Boston University as a Master's Student in computer engineering program. Hope to meet you guys in person as the pandamic has ruined all our outdoor activities.
+<br><br>You can find couple of my pics below:<br><br>
+
+  <div class="polo">
+  <div class = "hello1"><img src="vik2.jpg" style="width:100%"></div>
+  <div class="box">
+  <p>Happy Hallowin</p>
+  </div>
+  </div>
+
+  <div class="polo">
+  <div class = "hello1"><img src="vik.jpg" style="width:100%"></div>
+  <div class="box">
+  <p>Fall Colours</p>
+  </div>
+  </div>
+
+  <div class="polo">
+  <div class = "hello1"><img src="vik4.jpg" style="width:100%"></div>
+  <div class="box">
+  <p>Howdy Texas</p>
+  </div>
+  </div>
+
+<br>
+<br>
+<script>
+
+  new Vue({
+    el: '#mouse',
+    data: {
+      message: 'Welcome All'
+    }, 
+    methods: {
+      mouseover: function(){
+        this.message = 'Vikram Kachale Homepage!'
+      },    
+      mouseleave: function(){
+        this.message = 'Hope you Like my Website'
+      }
+    }
+  })
+  
+  </script>
+  
+</body>
+</html>

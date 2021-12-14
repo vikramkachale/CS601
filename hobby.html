@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hobbies</title>
+    <link rel="stylesheet" type = "text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <ul class="myclass">
+    <li class="myclass"><a href="Contact.html">Contact Me</a></li>
+    <li class="myclass"><a href="MyToys.html">My Toys</a></li>
+    <li class="myclass"><a href="hobby.html">Hobby</a></li>
+    <li class="myclass"><a href="academics.html">Academics</a></li>
+    <li class="myclass"><a href="prof.html">Professional</a></li>
+    <li class="myclass"><a href="hometown.html">HomeTown</a></li>
+    <li class="myclass"><a href="Intro.html">About</a></li>
+  </ul>
+  
+      <div class = "hello"><div class ="blinking" >
+        <div id="mouse">
+            <a
+              v-on:mouseover="mouseover"
+              v-on:mouseleave="mouseleave">
+              {{message}}
+            </a>
+          </div>
+    </div></div><br>
+Now Lets discuss few of my hobbies, A hobby is generally considered to be a regular activity that is done for enjoyment in leisure time.<br><br> I have couple of hobbies but for this assignment will be sharing top 3, So lets Go ... 
+
+<ul >
+<li class = "img">
+<b>Running</b></li>
+<p>
+Generally developing running as a hobby is a great way to improve the quality of life, it increase well-being, reduce stress and gain fitness all at the same time.
+</p><div class = "hello1">
+<img class = "size" src = "https://www.sportplushealth.com/blog/wp-content/uploads/2016/04/runner-uomo.jpg">
+<br><br></div>
+If you want to indulge in this hobby, Let me share my secret patter that helped me concore this challenge without breaking the streak:<br><br>
+<table class="table">
+<tr><th>Weeks</th><th>Minutes</th></tr>
+<tr><td>Week1</td><td>10 Minutes</td></tr>
+<tr><td>Week2</td><td>20 Minutes</td></tr>
+<tr><td>Week3</td><td>35 Minutes</td></tr>
+<tr><td>Week4</td><td>50 Minutes</td></tr>
+</table>
+<br><br>
+<li>
+<b class = "img">Photography</b>
+</li>
+<p>
+Capture the living world around you with images. Photography is a wonderful expression of art. You don�t even need an expensive camera; your phone will do fine, to begin with. People Express Themselves with Photographs - another reason why photography is turning into a favorite hobby is because people can express themselves better with photographs.
+</p>
+As the saying goes, <b>�A picture is worth a thousand words.�</b><br><br>
+<div class = "hello1">
+<img class = "size" src = "https://www.apnphotographyschool.com/wp-content/uploads/2018/02/make-money-with-photography.jpg">
+<br><br></div>
+
+<li class = "img">
+<b>Cooking</b>
+</li>
+<p>
+Who does not like food? So lets Cook it! There is so much more to food than just microwave.<br>Cooking isn�t hard at all; start simple and work from there.<br> I developed this hobby during pandamic when all the food outlets were closed and like everyone I also started craving for something special to eat.Now a days we have social media which also plays an important role if you want to upskill or lean anything new. Youtube played a major part in upscalling my hobbie and now my family and friends love all the new delicacies i cook for them now and then.</p>
+<div class = "hello1">
+<img class = "size" src = "https://borntocookbarcelona.com/wp-content/uploads/2015/07/btc_tallerpaella_low-167.jpg"/>
+<br><br></div>
+<a href="intro.html" class = "back">  Lets Head Back</a>
+</ul>
+<br>
+<script>
+
+  new Vue({
+    el: '#mouse',
+    data: {
+      message: 'My Hobbies'
+    }, 
+    methods: {
+      mouseover: function(){
+        this.message = 'Running, Photography, Cooking'
+      },    
+      mouseleave: function(){
+        this.message = 'Hope you Like my Website'
+      }
+    }
+  })
+  
+  </script>
+</body>
+</html>

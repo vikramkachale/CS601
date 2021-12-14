@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vikram Kachale</title>
+<link rel="stylesheet" type = "text/css" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.3.2/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/2.5.3/vue-router.min.js"></script>
+</head>
+<body>
+
+  <ul class="myclass">
+    <li class="myclass"><a href="Contact.html">Contact Me</a></li>
+    <li class="myclass"><a href="MyToys.html">My Toys</a></li>
+    <li class="myclass"><a href="hobby.html">Hobby</a></li>
+    <li class="myclass"><a href="prof.html">Professional</a></li>
+    <li class="myclass"><a href="hometown.html">HomeTown</a></li>
+    <li class="myclass"><a href="Intro.html">About</a></li>
+
+    
+  </ul>
+  
+<div class="hello"><div class="blinking">Welcome All!!</div></div>
+
+<br><br>This is Vikram Kachale from windy city "Chicago".I have recently joined Boston University as a Master's Student in computer engineering program. Hope to meet you guys in person as the pandamic has ruined all our outdoor activities.<br><br>
+You can find couple of my pics below:<br><br>
+<div>
+<div id="app1">
+  <img :src="myImage1" @mouseover="myImage1 = otherImage1" class="size"/>
+</div>
+<br>
+<div id="app2">
+  <img :src="myImage2" @mouseover="myImage2 = otherImage2" class="size"/>
+</div>
+<div id="app3">
+  <img :src="myImage3" @mouseover="myImage3 = otherImage3" class="size"/>
+</div>
+<div id="app4">
+  <img :src="myImage4" @mouseover="myImage4 = otherImage4" class="size"/>
+</div>
+</div>
+<br>
+<br>
+<script>
+
+new Vue({
+        el: '#app1',
+        data() {
+          return { 
+            myImage1: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHVwcHklMjBkb2d8ZW58MHx8MHx8&w=1000&q=80",
+            otherImage1: "https://play-lh.googleusercontent.com/Nqf7qZ7J5687ob_Q8JlTwCG9aW0URE_LrJX0gKqrFS34f-GxG2s11dWlWaVk1UsAPTo",
+            
+          }
+        }
+      });
+     
+      new Vue({
+        el: '#app2',
+        data() {
+          return { 
+            myImage2: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-girl-cat-names-1606245046.jpg?crop=0.668xw:1.00xh;0.126xw,0&resize=640:*",
+            otherImage2: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyJaThazwatp9iFlTuEszRLBkqCQc0xdlZ_LFYdz5Z__Ma-2KTHR4vMdmzGTlllK0tUQY&usqp=CAU",
+            
+          }
+        }
+      });
+
+      
+      new Vue({
+        el: '#app3',
+        data() {
+          return { 
+            myImage3: "https://static.boredpanda.com/blog/wp-content/uploads/2017/04/58fdbaac3329b_qWDL5Lq__700.jpg",
+            otherImage3: "https://akns-images.eonline.com/eol_images/Entire_Site/201438/rs_1024x759-140408154504-1024.baby-elephant-grass.ls.4814.jpg?fit=around%7C1024:759&output-quality=90&crop=1024:759;center,top",
+            
+          }
+        }
+      });
+      new Vue({
+        el: '#app4',
+        data() {
+          return { 
+            myImage4: "data:image/jpeg;base64,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",
+            otherImage4: "https://img.freepik.com/fotos-kostenlos/glueckliches-laechelndes-baby-in-einem-handtuch-nach-dem-baden_106368-652.jpg?size=626&ext=jpg",
+            
+          }
+        }
+      });
+
+
+</script>
+</body>
+</html>

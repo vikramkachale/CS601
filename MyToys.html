@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Toys</title>
+<link rel="stylesheet" type = "text/css" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.3.2/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/2.5.3/vue-router.min.js"></script>
+</head>
+<body>
+
+  <ul class="myclass">
+    <li class="myclass"><a href="Contact.html">Contact Me</a></li>
+    <li class="myclass"><a href="MyToys.html">My Toys</a></li>
+    <li class="myclass"><a href="hobby.html">Hobby</a></li>
+    <li class="myclass"><a href="academics.html">Academics</a></li>
+    <li class="myclass"><a href="prof.html">Professional</a></li>
+    <li class="myclass"><a href="hometown.html">HomeTown</a></li>
+    <li class="myclass"><a href="Intro.html">About</a></li>
+  </ul>
+  
+  <template id="main">
+    <div id="app1">
+        <ul>
+            <li><router-link to="/">Normal</router-link></li>
+            <li><router-link to="/1">Red</router-link></li>
+            <li><router-link to="/2">Blue</router-link></li>
+        </ul>
+        <router-view></router-view>
+    </div>
+  </template>
+  
+
+<div class="hello"><div class="blinking">Big Boys Toys</div></div>
+<div class = "bold">Welcome to my Garage <br>
+</div> <br> 
+You might be bored seeing the same colour schema, Do you Want to have some fun <br><br> Lets try changing the colour schema of this page. Choose from below:
+<div id="app" >
+  <img :src="myImage" @mouseover="myImage = otherImage" class="size"/>
+</div>
+How was it, Do let me know. Now lets get back to Work.<br><br>
+A garage may be a boring place to some but for me it is a relaxing place.This is where I keep my toys, Or I love to call them <b>Big Boys Toys </b> i.e <i><b>Mean Machine</b></i><br><br>
+
+
+<div class = "sub"> 2018 Chevrolet Camaro SS</div><br>
+<marquee behavior = "slide" scrollamount ="30">
+<div class="row">
+    <div class="column">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT04Fk1UMJRBGs_VOJEViC_wKSj5ySfUSXV5w&usqp=CAU" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDIqmqddhiIxEbecrtMlwJMd64qJi0vz2-og&usqp=CAU" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc1KdASUYM_ukL99xJJ_3dlebQbAHDBR3rBg&usqp=CAU" style="width:100%">
+    </div>
+  </div>
+</marquee>
+<div class = "sub"> 2020 Audi Q7</div><br>
+<marquee behavior = "slide" scrollamount ="30">
+    <div class="row">
+        <div class="column">
+          <img src="https://cdn.jdpower.com/JDPA_2020%20Audi%20Q7%20Premium%20Plus%20White%20Black%20Optic%20Package.jpg" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZnz7Yi8DrsRSv8ec2YUkWhSzvdlC550TTI2iVXSszjnV8SPq8fnKx-jZzPMnjxGcOBc4&usqp=CAU" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtZZbsYeDzpPHZJgPTEODzCsKE00eVVPl5qIuSxVT-lE4O_EoFomxnxd5D6yDrW2VLARg&usqp=CAU" style="width:100%">
+        </div>
+      </div>
+    </marquee>
+
+    <script>
+
+const Home = { template: '<div> </div>' }
+
+const Page1 = {
+    template: '<div> </div>',
+    beforeRouteEnter(to, from, next) {
+        window.document.body.style.backgroundColor = 'red';
+        window.document.body.style.color = 'yellow';
+        next();
+    },
+    beforeRouteLeave(to, from, next) {
+        window.document.body.style.backgroundColor = '';
+        window.document.body.style.color = 'black';
+        next();
+    }
+}
+
+const Page2 = {
+    template: '<div> </div>',
+    beforeRouteEnter(to, from, next) {
+        window.document.body.style.backgroundColor = 'blue';
+        window.document.body.style.color = 'white';
+        next();
+    },
+    beforeRouteLeave(to, from, next) {
+        window.document.body.style.backgroundColor = '';
+        window.document.body.style.color = 'black';
+        next();
+    }
+}
+
+const router = new VueRouter({
+    routes: [
+      { path: '/', component: Home },
+      { path: '/1', component: Page1 },
+      { path: '/2', component: Page2 }
+    ]
+})
+
+new Vue({
+    router,
+    template: '#main'
+}).$mount('#app')
+
+    </script>
+</body>
+</html>

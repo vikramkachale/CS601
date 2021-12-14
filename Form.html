@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forms</title>
+    <link rel="stylesheet" type = "text/css" href="style.css">
+</head>
+<body>
+    <ul class="myclass">
+        <li class="myclass"><a href="Java.html">Calculator</a></li>
+        <li class="myclass"><a href="hobby.html">Hobby</a></li>
+        <li class="myclass"><a href="prof.html">Professional</a></li>
+        <li class="myclass"><a href="academics.html">Academics</a></li>
+        <li class="myclass"><a href="hometown.html">HomeTown</a></li>
+        <li class="myclass"><a href="Intro.html">About</a></li>
+      </ul>
+<div class = "hello"> Lets Connect</div> <br>
+<form class="formclass" action="to http://bucs601.com/submit.php" name="VikForm" onsubmit="return validateform()" method="POST">
+<div>
+    <label for="fname"> First Name </label> <input type="text" id="fname" placeholder="First Name" required>
+    <b><span class="abc"></span></b><br>
+</div>
+<div>
+    <label for="lname">Last Name </label> <input type="text" id="lname" placeholder="Last Name" required>
+    <b><span> </span></b><br>
+</div>
+
+<div>
+   <label for="Facilitator"> Facilitator's Name </label> <input type="text" id="Facilitator" placeholder="Facilitator's Name" required>
+   <b><span></span></b><br><br>
+</div>
+
+Kindly select the Web development languages you would like to Learn:<br>
+<input type="checkbox" id="fhtml" name="HTML" value="HTML" checked> <label for="fhtml"> HTML </label><br>
+<input type="checkbox" id="fcss" name="fcss" value="css"> <label for="fcss"> CSS </label><br>
+<input type="checkbox" id="fjava" name="fjava" value="JavaScript"> <label for="fjava"> JavaScript </label><br><br>
+
+Kindly Selct your City:<br>
+<input type="radio" id="fchicago" name="fradio" value="Chicago" checked> <label for="fchicago"> Chicago </label><br>
+<input type="radio" id="fdallas" name="fradio" value="Dallas"> <label for="fdallas"> Dallas </label><br>
+<input type="radio" id="fnew" name="fradio" value="New York"> <label for="fnew"> New York </label><br><br>
+
+<button name="fbutton" type="submit">Submit</button>
+<button name="reset" type="reset">Reset</button>
+
+<script src="form.js"></script>
+
+</form>
+</body>
+</html>
